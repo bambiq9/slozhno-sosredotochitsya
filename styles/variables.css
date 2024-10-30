@@ -8,4 +8,5 @@
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
+  --padding: clamp(10px, 2.67vi, 20px);
 }
