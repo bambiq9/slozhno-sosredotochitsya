@@ -22,6 +22,7 @@
 }
 
 .container {
+  display: grid;
   padding-inline: var(--padding);
 }
 
@@ -164,7 +165,6 @@
 }
 
 .content,
-.content-section,
 .content__card-list,
 .card {
   display: grid;
@@ -173,6 +173,7 @@
 .content {
   /* 50-80 */
   row-gap: clamp(50px, 12vi, 80px);
+  margin-block-end: clamp(40px, 10%, 60px);
 }
 
 .content-section {
@@ -192,34 +193,36 @@
   gap: 10px;
 }
 
-.advice {
-  margin-block-end: 50px;
-}
-
 .card__title,
-.advice__title,
-.advice__subtitle  {
+.card__subtitle  {
   font-size: inherit;
   color: var(--bg-color);
   background-color: var(--accent-color);
 }
 
-.advice__subtitle {
+.card__subtitle {
   font-weight: inherit;
 }
 
-.advice__list,
-.advice__list-item {
+.gallery {
+  gap: 10px;
+}
+
+.gallery__title {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  block-size: 100vb;
   display: flex;
-  flex-direction: column;
-}
-
-.advice__list {
-  gap: 20px;
-}
-
-.advice__list-item {
-  gap: 10px;  
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
