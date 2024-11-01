@@ -5,7 +5,7 @@
 
 :root {
   --global-padding: clamp(10px, 2.67vi, 20px);
-  
+  --bg-color: #000028;
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
 

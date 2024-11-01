@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
+  --bg-color: #FFF1F7;
   --accent-color: #FF8DCB;
   --text-color: #353430;
 
@@ -25,3 +26,27 @@
 
   background-image: url(../images/cover-image-light.png);
 }
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+      --bg-color: #FFF1F7;
+      --accent-color: #FF8DCB;
+      --text-color: #353430;
+
+      --main-title-color: #FFC2E6;
+      --title-color: var(--text-color);
+      --secondary-title-color: var(--text-color);
+
+      --decorator-toggle: none;
+      --decorator-border: 1px solid var(--text-color);
+      --theme-menu-color: var(--text-color);
+      --theme-menu-color-translucent: #32312D66;
+      --link-shadow-color: var(--accent-color);
+
+    }
+
+    .page {
+      background-image: url(../images/cover-image-light.png);  
+    }
+  }
