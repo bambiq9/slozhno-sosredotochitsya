@@ -25,7 +25,7 @@
   gap: clamp(55px, 7.8vi, 162px);
   margin-block-end: clamp(40px, 10%, 60px);
   color: var(--accent-color); 
-  min-block-size: 100vb;
+  block-size: 100vb;
 }
 
 .header__theme-menu {
@@ -75,7 +75,7 @@
   color: var(--main-title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vi, 7.5rem);
   line-height: 95.7px;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--main-title-shadow);
 }
 
 .header__description {
@@ -250,7 +250,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-block-size: 100vb;
+  block-size: 100vb;
 }
 
 @media screen and (min-width: 768px) {

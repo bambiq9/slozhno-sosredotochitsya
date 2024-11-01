@@ -10,6 +10,7 @@
   --text-color: #F1B2CE;
 
   --main-title-color: #DB00FF;
+  --main-title-shadow: var(--accent-color);
   --title-color: var(--accent-color);
   --secondary-title-color: #000028;
   

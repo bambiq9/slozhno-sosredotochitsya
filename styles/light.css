@@ -15,6 +15,8 @@
   --text-color: #353430;
 
   --main-title-color: #FFC2E6;
+  --main-title-shadow: #FF0070;
+
   --title-color: var(--text-color);
   --secondary-title-color: var(--text-color);
 
@@ -35,6 +37,7 @@
       --text-color: #353430;
 
       --main-title-color: #FFC2E6;
+      --main-title-shadow: #FF0070;
       --title-color: var(--text-color);
       --secondary-title-color: var(--text-color);
 
