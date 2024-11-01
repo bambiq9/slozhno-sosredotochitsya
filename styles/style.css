@@ -1,45 +1,37 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-size: 18px;
-  line-height: 23.4px;
-  font-family: "IBM Plex mono";
   color: var(--text-color);
+  font-family: "IBM Plex mono";
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-size: 1.125rem;
+  line-height: 23.4px;
   background-image: url(../images/cover-image-dark.png);
-  background-position: bottom;
   background-repeat: no-repeat;
+  background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.page::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0 0 0 / 0.2)
-}
-
 .container {
   display: grid;
-  padding-inline: var(--padding);
+  padding-inline: var(--global-padding);
 }
 
 .header {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  /* Заменить хардкод размеры */
-  gap: clamp(55px, 7.8vi, 162px); 
-  block-size: 100vb;
-  color: var(--accent-color);
+  gap: clamp(55px, 7.8vi, 162px);
   margin-block-end: clamp(40px, 10%, 60px);
+  color: var(--accent-color); 
+  min-block-size: 100vb;
 }
 
 .header__theme-menu {
   justify-self: flex-end;
   align-content: flex-end;
   padding-bottom: 14px;
+  color: var(--theme-menu-color);
 }
 
 .header__theme-menu-list {
@@ -49,14 +41,29 @@
 }
 
 .header__theme-menu-button {
-  background: none;
   border: none;
-  text-transform: lowercase;
   padding-inline: 13px;
+  text-transform: lowercase;
+  background: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--theme-menu-color-translucent);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  margin-bottom: -1px;
+  border-bottom: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--theme-menu-color);
+  pointer-events: none;
 }
 
 .header__title {
@@ -64,24 +71,24 @@
 }
 
 .title-decor {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--main-title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vi, 7.5rem);
   line-height: 95.7px;
-  color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__description {
-  max-block-size: 120px;
-  overflow: hidden;
-  max-inline-size: calc(100vb - 60%);
   justify-self: flex-end;
+  overflow: hidden;
+  max-block-size: 120px;
+  max-inline-size: calc(100vb - 60%);
 }
 
 .subtitle {
-  color: var(--bg-color);
+  color: var(--secondary-title-color);
+  font-weight: 700;
   font-size: inherit;
   background-color: var(--accent-color);
-  font-weight: 700;
   inline-size: 100%;
 }
 
@@ -98,65 +105,65 @@
 }
 
 .decorated-zone::before {
-  inset-block-start: var(--padding);
-  inset-inline-end: var(--padding);
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: var(--decorator-border);
+  border-block-start: var(--decorator-border);
+  inset-block-start: var(--global-padding);
+  inset-inline-end: var(--global-padding);
 }
 
 .decorated-zone::after {
-  inset-inline-start: var(--padding);
-  inset-block-end: var(--padding);
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: var(--decorator-border);
+  border-block-end: var(--decorator-border);
+  inset-inline-start: var(--global-padding);
+  inset-block-end: var(--global-padding);
 }
 
 .header__decorator {
   position: absolute;
-  inset-block-start: var(--padding);
-  inset-inline-end: calc(var(--padding) + 9px);
-  display: flex;
+  display: var(--decorator-toggle);
   align-items: center;
+  inset-block-start: var(--global-padding);
+  inset-inline-end: calc(var(--global-padding) + 9px);
 }
 
 .header__decorator::before {
   content: "rec";
-  text-transform: uppercase;
   padding-inline-end: 10px;
   line-height: 25px;
+  text-transform: uppercase;
 }
 
 .header__decorator::after {
   content: "";
-  inline-size: 9px;
-  block-size: 9px;
-  background-color: var(--accent-color);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
 }
 
 @media screen and (min-width: 768px) {
 
   .header__title {
-    margin-inline-start: calc(0px - var(--padding));
+    margin-inline-start: calc(0px - var(--global-padding));
   }
 
   .title-decor {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vi, 9.8125rem);
   }
 
   .header__description {
-    max-inline-size: 100%;
     padding-inline-start: 50%;
+    max-inline-size: 100%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   
   .header__theme-menu {
-    padding-block-start: var(--padding);
     justify-self: center;
     align-self: flex-start;
+    padding-block-start: var(--global-padding);
   }
 
   .header__theme-menu-list {
@@ -171,7 +178,6 @@
 }
 
 .content {
-  /* 50-80 */
   row-gap: clamp(50px, 12vi, 80px);
   margin-block-end: clamp(40px, 10%, 60px);
 }
@@ -180,13 +186,34 @@
   gap: 20px;
 }
 
-.content__card-list {
+.content__title {
+  color: var(--title-color);
+  font-size: inherit;
+}
+
+.content__description {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-.content__title {
-  color: var(--accent-color);
-  font-size: inherit;
+.content__link {
+  display: inline-block;
+  line-height: 1em;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--link-shadow-color);
+}
+
+.content__link:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.content__card-list {
+  gap: 20px;
 }
 
 .card {
@@ -195,8 +222,8 @@
 
 .card__title,
 .card__subtitle  {
+  color: var(--secondary-title-color);
   font-size: inherit;
-  color: var(--bg-color);
   background-color: var(--accent-color);
 }
 
@@ -209,41 +236,65 @@
 }
 
 .gallery__title {
+  color: var(--secondary-title-color);
   background-color: var(--accent-color);
-  color: var(--bg-color);
 }
 
 .gallery__image {
   display: block;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .footer {
-  block-size: 100vb;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-block-size: 100vb;
 }
 
 @media screen and (min-width: 768px) {
 
   .content-section {
     grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "title content";
   }
 
   .content-section_wide {
     grid-template-areas:
       "title ..."
-      "card-list card-list";
+      "content content";
   }
 
-  .content-section_wide .content__title {
+  .content__title {
     grid-area: title;
   }
 
-  .content-section_wide .content__card-list {
-    grid-area: card-list;
+  .content__description {
+    grid-area: content;
   }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "title title title";
+    gap: 20px;
+  }
+
+  .gallery__image-container:nth-child(2),
+  .gallery__image-container:last-child {
+    grid-column: span 2;
+  }
+
+  .gallery__image-container:nth-child(3),
+  .gallery__image-container:nth-child(4) {
+    grid-row: span 2;
+  }
+
+  .gallery__image {
+    block-size: 100%;
+    object-fit: cover;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
