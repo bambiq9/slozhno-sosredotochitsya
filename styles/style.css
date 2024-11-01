@@ -29,10 +29,12 @@
 }
 
 .header__theme-menu {
-  justify-self: flex-end;
-  align-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   padding-bottom: 14px;
   color: var(--theme-menu-color);
+  height: 100%;
 }
 
 .header__theme-menu-list {
@@ -150,6 +152,7 @@
   }
 
   .title-decor {
+    text-shadow: 4px 4px 0 var(--accent-color);
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vi, 9.8125rem);
   }
 
@@ -164,6 +167,7 @@
   .header__theme-menu {
     justify-self: center;
     align-self: flex-start;
+    align-items: flex-start;
     padding-block-start: var(--global-padding);
   }
 
