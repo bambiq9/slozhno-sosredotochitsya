@@ -1,9 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  color: var(--text-color);
-  font-family: "IBM Plex mono";
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--text-color);
+  font-family: 'IBM Plex mono';
   font-size: 1.125rem;
   line-height: 23.4px;
   background-color: var(--bg-color);
@@ -24,7 +24,7 @@
   grid-template-rows: repeat(3, 1fr);
   gap: clamp(55px, 7.8vi, 162px);
   margin-block-end: clamp(40px, 10%, 60px);
-  color: var(--accent-color); 
+  color: var(--accent-color);
   block-size: 100vb;
 }
 
@@ -87,7 +87,7 @@
   max-inline-size: calc(100vb - 60%);
 }
 
-.subtitle {
+.card-title-decor {
   color: var(--secondary-title-color);
   font-weight: 700;
   font-size: inherit;
@@ -101,7 +101,7 @@
 
 .decorated-zone::before,
 .decorated-zone::after {
-  content: "";
+  content: '';
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
@@ -130,50 +130,19 @@
 }
 
 .header__decorator::before {
-  content: "rec";
+  content: 'rec';
   padding-inline-end: 10px;
   line-height: 25px;
   text-transform: uppercase;
 }
 
 .header__decorator::after {
-  content: "";
+  content: '';
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
   inline-size: 9px;
   block-size: 9px;
-}
-
-@media screen and (min-width: 768px) {
-
-  .header__title {
-    margin-inline-start: calc(0px - var(--global-padding));
-  }
-
-  .title-decor {
-    text-shadow: 4px 4px 0 var(--accent-color);
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vi, 9.8125rem);
-  }
-
-  .header__description {
-    padding-inline-start: 50%;
-    max-inline-size: 100%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  
-  .header__theme-menu {
-    justify-self: center;
-    align-self: flex-start;
-    align-items: flex-start;
-    padding-block-start: var(--global-padding);
-  }
-
-  .header__theme-menu-list {
-    flex-direction: row; 
-  }
 }
 
 .content,
@@ -226,10 +195,8 @@
 }
 
 .card__title,
-.card__subtitle  {
-  color: var(--secondary-title-color);
+.card__subtitle {
   font-size: inherit;
-  background-color: var(--accent-color);
 }
 
 .card__subtitle {
@@ -237,7 +204,7 @@
 }
 
 .gallery {
-  gap: 10px;
+  gap: var(--global-padding);
 }
 
 .gallery__title {
@@ -259,16 +226,29 @@
 
 @media screen and (min-width: 768px) {
 
+  .header__title {
+    margin-inline-start: calc(0px - var(--global-padding));
+  }
+
+  .title-decor {
+    text-shadow: 4px 4px 0 var(--accent-color);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vi, 9.8125rem);
+  }
+
+  .header__description {
+    padding-inline-start: 50%;
+    max-inline-size: 100%;
+  }
+
   .content-section {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      "title content";
+    grid-template-areas: 'title content';
   }
 
   .content-section_wide {
     grid-template-areas:
-      "title ..."
-      "content content";
+      'title ...'
+      'content content';
   }
 
   .content__title {
@@ -281,8 +261,7 @@
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "title title title";
-    gap: 20px;
+    grid-template-areas: 'title title title';
   }
 
   .gallery__image-container:nth-child(2),
@@ -300,13 +279,22 @@
     object-fit: cover;
     object-position: center;
   }
-
 }
 
 @media screen and (min-width: 1024px) {
-  
-  .content-section_wide .content__card-list {
-    grid-template-columns: repeat(auto-fit, minmax(calc(100vi / 4), 1fr));
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+    align-items: flex-start;
+    padding-block-start: var(--global-padding);
   }
-  
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .content-section_wide .content__card-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }

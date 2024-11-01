@@ -10,12 +10,12 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-  --bg-color: #FFF1F7;
-  --accent-color: #FF8DCB;
+  --bg-color: #fff1f7;
+  --accent-color: #ff8dcb;
   --text-color: #353430;
 
-  --main-title-color: #FFC2E6;
-  --main-title-shadow: #FF0070;
+  --main-title-color: #ffc2e6;
+  --main-title-shadow: #ff0070;
 
   --title-color: var(--text-color);
   --secondary-title-color: var(--text-color);
@@ -23,7 +23,7 @@
   --decorator-toggle: none;
   --decorator-border: 1px solid var(--text-color);
   --theme-menu-color: var(--text-color);
-  --theme-menu-color-translucent: #32312D66;
+  --theme-menu-color-translucent: #32312d66;
   --link-shadow-color: var(--accent-color);
 
   background-image: url(../images/cover-image-light.png);
@@ -32,24 +32,23 @@
 @media (prefers-color-scheme: light) {
 
   :root {
-      --bg-color: #FFF1F7;
-      --accent-color: #FF8DCB;
-      --text-color: #353430;
+    --bg-color: #fff1f7;
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
 
-      --main-title-color: #FFC2E6;
-      --main-title-shadow: #FF0070;
-      --title-color: var(--text-color);
-      --secondary-title-color: var(--text-color);
+    --main-title-color: #ffc2e6;
+    --main-title-shadow: #ff0070;
+    --title-color: var(--text-color);
+    --secondary-title-color: var(--text-color);
 
-      --decorator-toggle: none;
-      --decorator-border: 1px solid var(--text-color);
-      --theme-menu-color: var(--text-color);
-      --theme-menu-color-translucent: #32312D66;
-      --link-shadow-color: var(--accent-color);
-
-    }
-
-    .page {
-      background-image: url(../images/cover-image-light.png);  
-    }
+    --decorator-toggle: none;
+    --decorator-border: 1px solid var(--text-color);
+    --theme-menu-color: var(--text-color);
+    --theme-menu-color-translucent: #32312d66;
+    --link-shadow-color: var(--accent-color);
   }
+
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
+}

@@ -9,21 +9,21 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  
-  --bg-color: #000028;
-  --accent-color: #FF0070;
-  --text-color: #F1B2CE;
 
-  --main-title-color: #DB00FF;
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --text-color: #f1b2ce;
+
+  --main-title-color: #db00ff;
   --main-title-shadow: var(--accent-color);
   --title-color: var(--accent-color);
   --secondary-title-color: #000028;
-  
+
   --decorator-toggle: flex;
   --decorator-border: 1px solid var(--accent-color);
   --theme-menu-color: var(--accent-color);
-  --theme-menu-color-translucent: #FF007066;
+  --theme-menu-color-translucent: #ff007066;
   --link-shadow-color: var(--accent-color);
 
-  background-image: url(../images/cover-image-dark.png)
+  background-image: url(../images/cover-image-dark.png);
 }
