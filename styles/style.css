@@ -3,10 +3,6 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--text-color, #f1b2ce);
-  font-family: var(--font-family, monospace);
-  font-size: 1.125rem;
-  line-height: 23.4px;
-  background-color: var(--bg-color, #000028);
   background-image: url(../images/cover-image-dark.png);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -26,6 +22,7 @@
   margin-block-end: clamp(40px, 10%, 60px);
   color: var(--accent-color);
   block-size: 100vb;
+  min-block-size: 668px;
 }
 
 .header__theme-menu {
@@ -81,13 +78,6 @@
   max-inline-size: 100%;
 }
 
-@media screen and (768px > width > 375px) {
-
-  .header__description {
-    max-inline-size: calc(100vb - 45%);
-  }
-}
-
 .decorated-zone {
   position: relative;
 }
@@ -118,19 +108,15 @@
   position: absolute;
   display: var(--decorator-toggle, none);
   align-items: center;
+  text-transform: uppercase;
+  pointer-events: none;
   inset-block-start: var(--global-padding);
   inset-inline-end: calc(var(--global-padding) + 9px);
 }
 
-.header__decorator::before {
-  content: 'rec';
-  padding-inline-end: 10px;
-  line-height: 25px;
-  text-transform: uppercase;
-}
-
 .header__decorator::after {
   content: '';
+  margin-inline-start: 10px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
@@ -210,6 +196,7 @@
   justify-content: center;
   align-items: center;
   block-size: 100vb;
+  min-block-size: 668px;
 }
 
 .title-decor {

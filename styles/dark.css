@@ -22,7 +22,7 @@
   --decorator-toggle: flex;
   --decorator-border: 1px solid var(--accent-color);
   --theme-menu-color: var(--accent-color);
-  --theme-menu-color-translucent: rgba(#ff007066);
+  --theme-menu-color-translucent: #ff007066;
   --link-shadow-color: var(--accent-color);
 
   background-image: url(../images/cover-image-dark.png);

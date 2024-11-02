@@ -23,7 +23,7 @@
   --decorator-toggle: none;
   --decorator-border: 1px solid var(--text-color);
   --theme-menu-color: var(--text-color);
-  --theme-menu-color-translucent: rgba(#32312d66);
+  --theme-menu-color-translucent: #32312d66;
   --link-shadow-color: var(--accent-color);
 
   background-image: url(../images/cover-image-light.png);
