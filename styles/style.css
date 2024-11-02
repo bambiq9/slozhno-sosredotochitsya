@@ -76,6 +76,7 @@
 .header__description {
   justify-self: flex-end;
   overflow: hidden;
+  font-weight: 700;
   max-block-size: 120px;
   max-inline-size: 100%;
 }
@@ -220,7 +221,6 @@
 
 .subtitle-decor {
   color: var(--secondary-title-color, #000028);
-  font-weight: 700;
   font-size: inherit;
   background-color: var(--accent-color, #ff0070);
   inline-size: 100%;
