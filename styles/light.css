@@ -15,7 +15,7 @@
   --text-color: #353430;
 
   --main-title-color: #ffc2e6;
-  --main-title-shadow: #ff0070;
+  --main-title-shadow: var(--accent-color);
 
   --title-color: var(--text-color);
   --secondary-title-color: var(--text-color);
@@ -23,7 +23,7 @@
   --decorator-toggle: none;
   --decorator-border: 1px solid var(--text-color);
   --theme-menu-color: var(--text-color);
-  --theme-menu-color-translucent: #32312d66;
+  --theme-menu-color-translucent: rgba(#32312d66);
   --link-shadow-color: var(--accent-color);
 
   background-image: url(../images/cover-image-light.png);
@@ -37,7 +37,7 @@
     --text-color: #353430;
 
     --main-title-color: #ffc2e6;
-    --main-title-shadow: #ff0070;
+    --main-title-shadow: var(--accent-color);
     --title-color: var(--text-color);
     --secondary-title-color: var(--text-color);
 
@@ -50,5 +50,12 @@
 
   .page {
     background-image: url(../images/cover-image-light.png);
+  }
+}
+
+@media screen and (width >= 1024px) {
+
+  .title-decor {
+    --main-title-shadow: #ff0070;
   }
 }

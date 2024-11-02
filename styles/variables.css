@@ -4,7 +4,11 @@
 */
 
 :root {
+  --font-family: 'IBM Plex mono', monospace;
   --global-padding: clamp(10px, 2.67vi, 20px);
+  --gap-s: 10px;
+  --gap-l: 20px;
+
   --bg-color: #000028;
   --accent-color: #ff0070;
   --text-color: #f1b2ce;

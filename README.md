@@ -1,0 +1,1 @@
+github: https://github.com/bambiq9/slozhno-sosredotochitsya.git
